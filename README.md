@@ -1,16 +1,18 @@
 # flutter_todo_riverpod
 
-A new Flutter project.
+## How to create a new flutter project?
 
-## Getting Started
+```
+flutter create flutter_todo_riverpod
+```
 
-This project is a starting point for a Flutter application.
+Please note that, name can only contain `[a-z0-9_]`, and no dart reserved keywords are allowed.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to upgrade dependencies?
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+flutter pub upgrade --major-versions
+```
+
+It only updates pubspec.lock, but not pubspec.yaml.
