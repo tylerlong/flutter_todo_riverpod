@@ -26,3 +26,14 @@ It only updates pubspec.lock, but not pubspec.yaml.
 ```
 flutter run -d chrome
 ```
+
+
+## Notes
+
+### `ref.watch` vs `ref.read`
+
+- `ref.watch` returns the value of a provider.
+  - `final counter = ref.watch(counterProvider)`
+- `ref.read` returns the provider
+  - `ref.read(counterProvider.notifier).state++`
+  - `ref.read(counterProvider.notifier).increment()`

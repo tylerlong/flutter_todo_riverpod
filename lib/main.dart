@@ -5,9 +5,14 @@ void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-final counterProvider = StateProvider<int>((ref) {
-  return 0;
+final counterProvider = StateNotifierProvider((ref) {
+  return Counter();
 });
+
+class Counter extends StateNotifier<int> {
+  Counter() : super(0);
+  void increment() => state++;
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -49,7 +54,7 @@ class MyHomePage extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(counterProvider.notifier).state++,
+        onPressed: () => ref.read(counterProvider.notifier).increment(),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
