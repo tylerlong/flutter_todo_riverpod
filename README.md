@@ -1,5 +1,8 @@
 # flutter_todo_riverpod
 
+- Ref: https://codewithandrea.com/articles/flutter-state-management-riverpod/
+
+
 ## How to create a new flutter project?
 
 ```
@@ -16,3 +19,10 @@ flutter pub upgrade --major-versions
 ```
 
 It only updates pubspec.lock, but not pubspec.yaml.
+
+
+## Run (in Chrome browser)
+
+```
+flutter run -d chrome
+```
