@@ -16,7 +16,9 @@ class HomePage extends StatelessWidget {
           children: const <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: TextStyle(fontSize: 24),
             ),
+            SizedBox(height: 10),
             CounterWidget(),
           ],
         ),

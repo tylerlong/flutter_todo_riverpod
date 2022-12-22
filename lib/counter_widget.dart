@@ -13,9 +13,13 @@ class CounterWidget extends ConsumerWidget {
       IconButton(
           onPressed: () => ref.read(counterProvider.notifier).decrease(),
           icon: const Icon(Icons.remove_circle)),
-      Text(
-        '$counter',
-        style: Theme.of(context).textTheme.headline4,
+      SizedBox(
+        width: 128,
+        child: Center(
+            child: Text(
+          '$counter',
+          style: Theme.of(context).textTheme.headline4,
+        )),
       ),
       IconButton(
           onPressed: () => ref.read(counterProvider.notifier).increase(),
