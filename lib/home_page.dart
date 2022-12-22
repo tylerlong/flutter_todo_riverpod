@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              'The current counter value is:',
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 10),
