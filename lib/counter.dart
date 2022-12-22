@@ -6,5 +6,6 @@ part 'counter.g.dart';
 class Counter extends _$Counter {
   @override
   int build() => 0;
-  void increment() => state++;
+  void increase() => state++;
+  void decrease() => state--;
 }

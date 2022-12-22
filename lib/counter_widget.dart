@@ -9,9 +9,17 @@ class CounterWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final counter = ref.watch(counterProvider);
-    return Text(
-      '$counter',
-      style: Theme.of(context).textTheme.headline4,
-    );
+    return Row(children: [
+      IconButton(
+          onPressed: () => ref.read(counterProvider.notifier).decrease(),
+          icon: const Icon(Icons.remove)),
+      Text(
+        '$counter',
+        style: Theme.of(context).textTheme.headline4,
+      ),
+      IconButton(
+          onPressed: () => ref.read(counterProvider.notifier).increase(),
+          icon: const Icon(Icons.add)),
+    ]);
   }
 }

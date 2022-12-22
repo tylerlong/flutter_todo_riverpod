@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_todo_riverpod/action_button.dart';
 import 'package:flutter_todo_riverpod/counter_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,7 +21,6 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: const ActionButton(),
     );
   }
 }
