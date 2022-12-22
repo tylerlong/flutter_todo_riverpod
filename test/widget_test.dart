@@ -21,20 +21,26 @@ void main() {
     expect(find.text('1'), findsNothing);
 
     // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.tap(find.byIcon(Icons.add_circle));
     await tester.pump();
-
-    // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
 
     // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    await tester.tap(find.byIcon(Icons.add_circle));
     await tester.pump();
-
-    // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsNothing);
     expect(find.text('2'), findsOneWidget);
+
+    // Tap the '-' icon 3 times and trigger a frame.
+    await tester.tap(find.byIcon(Icons.remove_circle));
+    await tester.tap(find.byIcon(Icons.remove_circle));
+    await tester.tap(find.byIcon(Icons.remove_circle));
+    await tester.pump();
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsNothing);
+    expect(find.text('2'), findsNothing);
+    expect(find.text('-1'), findsOneWidget);
   });
 }
