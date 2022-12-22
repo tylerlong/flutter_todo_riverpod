@@ -28,6 +28,17 @@ flutter run -d chrome
 ```
 
 
+## Annotation and generator
+
+To support `@riverpod`
+
+```
+flutter pub run build_runner watch
+```
+
+Auto-generated code will be placed in `*.g.dart` files.
+
+
 ## Notes
 
 ### `ref.watch` vs `ref.read`
@@ -37,3 +48,8 @@ flutter run -d chrome
 - `ref.read` returns the provider
   - `ref.read(counterProvider.notifier).state++`
   - `ref.read(counterProvider.notifier).increment()`
+
+
+### `ref.listen`
+
+As far as I can tell, `ref.listen` is for listen to changes and do some side effects.
