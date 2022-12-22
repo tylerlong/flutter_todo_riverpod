@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+// import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+// part 'main.g.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-final counterProvider = StateNotifierProvider((ref) {
-  return Counter();
-});
-
-class Counter extends StateNotifier<int> {
-  Counter() : super(0);
+class Counter extends Notifier<int> {
+  @override
+  int build() => 0;
   void increment() => state++;
 }
+
+final counterProvider = NotifierProvider<Counter, int>(Counter.new);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
