@@ -1,6 +1,7 @@
 # flutter_todo_riverpod
 
 - Ref: https://codewithandrea.com/articles/flutter-state-management-riverpod/
+- Ref: https://codewithandrea.com/articles/flutter-riverpod-async-notifier/
 
 
 ## How to create a new flutter project?
@@ -21,13 +22,6 @@ flutter pub upgrade --major-versions
 It only updates pubspec.lock, but not pubspec.yaml.
 
 
-## Run (in Chrome browser)
-
-```
-flutter run -d chrome
-```
-
-
 ## Annotation and generator
 
 To support `@riverpod`
@@ -37,6 +31,20 @@ flutter pub run build_runner watch
 ```
 
 Auto-generated code will be placed in `*.g.dart` files.
+
+
+## Run (in Chrome browser)
+
+```
+flutter run -d chrome
+```
+
+
+## Test
+
+```
+flutter test
+```
 
 
 ## Notes
