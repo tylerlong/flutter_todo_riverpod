@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_todo_riverpod/action_button.dart';
+import 'package:flutter_todo_riverpod/counter_widget.dart';
 
-import 'counter.dart';
-
-class HomePage extends ConsumerWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final counter = ref.watch(counterProvider);
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Todo Demo'),
@@ -16,22 +14,15 @@ class HomePage extends ConsumerWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
+          children: const <Widget>[
+            Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            CounterWidget(),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => ref.read(counterProvider.notifier).increment(),
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      floatingActionButton: const ActionButton(),
     );
   }
 }
